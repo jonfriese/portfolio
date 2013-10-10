@@ -7,7 +7,7 @@ feature "Deleting a Post" do
     
     page.find("tr:last").click_on "Destroy"
     
-    page.wont_have_content "Code Rails"
+    page.wont_have_content "rails"
   end
 end
 
