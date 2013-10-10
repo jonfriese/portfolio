@@ -8,6 +8,7 @@ end
 
 group :test do
   gem "minitest-rails-capybara"
+  gem "turn"
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

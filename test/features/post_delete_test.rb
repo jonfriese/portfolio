@@ -1,10 +1,11 @@
 require "test_helper"
 
-feature "deleting a post" do
-  scenario "a post is present" do
-    visit post_paths/delete
-    page.text.must_have_content 'new post'
-    click_on "delete"
-    page.text.wont_have_content 'new post'
+feature "Deleting a Post" do
+  scenario "post is deleted with a click" do
+    Post.create(title: ":cr", body: ":cd")
+    visit posts_path
+    page.find_by_id("tester").click_on "Destroy"
+    page.wont_have_content ":cr"
   end
 end
+
